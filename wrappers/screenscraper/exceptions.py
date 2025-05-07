@@ -1,0 +1,2 @@
+class RESTException(Exception):
+    pass
