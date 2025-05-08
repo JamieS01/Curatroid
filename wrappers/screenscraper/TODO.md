@@ -1,0 +1,50 @@
+- [ ] Create data models
+    - [x] Server
+    - [x] User
+    - [x] Member Level Type
+    - [x] Player Count Type
+    - [x] Support Type
+    - [x] ROM Type
+    - [ ] Genre Type
+    - [x] Region Type
+    - [x] Language Type
+    - [ ] Classification Type
+    - [-] Media Type
+        - [ ] System Media Type
+        - [ ] Game Media Type
+    - [ ] Info Type
+        - [ ] Game Info Type
+        - [ ] ROM Info Type
+    - [ ] System Type
+    - [ ] Media
+        - [ ] Image
+        - [ ] Video
+        - [ ] Manual
+- [ ] Create endpoint query functions
+    - [ ] ssinfraInfos.php
+    - [ ] ssuserInfos.php
+    - [ ] userlevelsListe.php
+    - [ ] nbJoueursListe.php
+    - [ ] supportTypesListe.php
+    - [ ] romTypesListe.php
+    - [ ] genresListe.php
+    - [ ] regionsListe.php
+    - [ ] languesListe.php
+    - [ ] classificationListe.php
+    - [ ] mediasSystemeListe.php
+    - [ ] mediasJeuListe.php
+    - [ ] infosJeuListe.php
+    - [ ] infosRomListe.php
+    - [ ] mediaGroup.php
+    - [ ] mediaCompagnie.php
+    - [ ] systemesListe.php
+    - [ ] mediaSysteme.php
+    - [ ] mediaVideoSysteme.php
+    - [ ] jeuRecherche.php
+    - [ ] jeuInfos.php
+    - [ ] mediaJeu.php
+    - [ ] mediaVideoJeu.php
+    - [ ] mediaManuelJeu.php
+    - [ ] botNote.php
+    - [ ] botProposition.php
+- [ ] Implement rate limiting
