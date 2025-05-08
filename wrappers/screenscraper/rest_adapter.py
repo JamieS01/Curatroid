@@ -1,7 +1,7 @@
 import requests
 import requests.packages
 import logging
-from typing import List, Dict, Optional
+from typing import Dict, Optional
 from json import JSONDecodeError
 from exceptions import RESTException
 from models.result import Result
@@ -18,7 +18,7 @@ class RestAdapter:
         :param ssl_verify: Normally True, but can be False to prevent SSL/TLS certificate validation issues
         :param logger: (optional) if app consuming this function has a logger, pass here
         """
-        
+
         self.session = requests.Session()
         self.url = "https://{}/{}/".format(hostname, ver)
         self._api_key = api_key

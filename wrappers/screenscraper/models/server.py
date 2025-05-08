@@ -1,32 +1,31 @@
+# models/server.py
 from typing import Dict, Any
 from dataclasses import dataclass, field
 
 @dataclass
 class Server:
 
-    cpu1: int # CPU usage on server 1
-    cpu2: int # CPU usage on server 2
-    cpu3: int # CPU usage on server 3
-    cpu4: int # CPU usage on server 4
-    threadsmin: int # total number of API accesses in the last minute
-    nbscrapeurs: int # number of active API users
-    apiacces: int # total number of API accesses made today (midnight to current, Fr)
-    closefornomember: bool # 1 if API is closed to non members
-    closeforleecher: bool # 1 if API is closed to users with no contributions
-    maxthreadfornonmember: int # Max concurrent threads for non members
-    threadfornonmember: int # Currently open threads for non members
-    maxthreadformember: int # Max concurrent threads for members
-    threadformember: int # Currently open threads for members
+    cpu_1_load: int                     # 'cpu1'
+    cpu_2_load: int                     # 'cpu2'
+    cpu_3_load: int                     # 'cpu3'
+    cpu_4_load: int                     # 'cpu4'
+    threads_per_minute: int             # 'threadsmin'
+    active_scrapers: int                # 'nbscrapeurs'
+    total_api_calls_today: int          # 'apiacces'
+    closed_to_non_members: bool         # 'closefornomember'
+    closed_to_leechers: bool            # 'closeforleecher'
+    max_threads_non_member: int         # 'maxthreadfornonmember'
+    current_threads_non_member: int     # 'threadfornonmember'
+    max_threads_member: int             # 'maxthreadformember'
+    current_threads_member: int         # 'threadformember'
 
-    # Catch-all for any extra fields returned by the API
     extra_fields: Dict[str, Any] = field(default_factory=dict)
 
     @classmethod
     def from_dict(cls, data: dict) -> 'Server':
 
         """
-        Factory method to create a Server instance from a dict,
-        converting strings to appropriate types and capturing unknown fields.
+        Factory method to create a Server instance from a dict.
         """
 
         known_keys = {
@@ -36,19 +35,19 @@ class Server:
         }
 
         return cls(
-            cpu1=int(data["cpu1"]),
-            cpu2=int(data["cpu2"]),
-            cpu3=int(data["cpu3"]),
-            cpu4=int(data["cpu4"]),
-            threadsmin=int(data["threadsmin"]),
-            nbscrapeurs=int(data["nbscrapeurs"]),
-            apiacces=int(data["apiacces"]),
-            closefornomember=bool(int(data["closefornomember"])),
-            closeforleecher=bool(int(data["closeforleecher"])),
-            maxthreadfornonmember=int(data["maxthreadfornonmember"]),
-            threadfornonmember=int(data["threadfornonmember"]),
-            maxthreadformember=int(data["maxthreadformember"]),
-            threadformember=int(data["threadformember"]),
+            cpu_1_load=int(data["cpu1"]),
+            cpu_2_load=int(data["cpu2"]),
+            cpu_3_load=int(data["cpu3"]),
+            cpu_4_load=int(data["cpu4"]),
+            threads_per_minute=int(data["threadsmin"]),
+            active_scrapers=int(data["nbscrapeurs"]),
+            total_api_calls_today=int(data["apiacces"]),
+            closed_to_non_members=bool(int(data["closefornomember"])),
+            closed_to_leechers=bool(int(data["closeforleecher"])),
+            max_threads_non_member=int(data["maxthreadfornonmember"]),
+            current_threads_non_member=int(data["threadfornonmember"]),
+            max_threads_member=int(data["maxthreadformember"]),
+            current_threads_member=int(data["threadformember"]),
             extra_fields={
                 k: v for k, v in data.items() if k not in known_keys
             }

@@ -1,5 +1,2 @@
 config.ini
-*.pyc
-*.CacheBackup
-*.xmlbackup
-Archive/*
+__pycache__/
