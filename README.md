@@ -6,51 +6,17 @@ This project is in early development. The MVP focuses on LaunchBox support and b
 
 ## Goals
 
-- Parse game lists from supported frontends (LaunchBox for MVP)
+- Parse game lists from supported frontends
 - Scrape metadata from IGDB and ScreenScraper APIs
 - Store enriched metadata in a persistent cache
 - Allow the user to define preferences for each metadata field
 - Score games based on normalized user preferences
 - Export a curated selection of games to CSV or LaunchBox playlist format
 
-## MVP Scope
-
-### Configuration
-- `config.ini` defines global settings, frontend type, and API credentials
-- `preferences.ini` defines weights and filters for scoring
-
-### Ingestion
-- Parse `Files.xml` from LaunchBox to extract game name, path, and platform
-
-### API Clients
-- IGDB client:
-  - Load credentials
-  - Authenticate and cache token
-  - Search by attributes (e.g. name, filename, hash)
-  - Query full metadata by ID
-
-- ScreenScraper client:
-  - Load credentials
-  - Search and retrieve metadata
-
-### Metadata Storage
-- Centralized store for all enriched game metadata
-- Avoid redundant queries across sessions
-
-### Scoring
-- Apply user preferences
-- Normalize and compute a final score per game
-
-### Output
-- Write results to CSV
-- Generate LaunchBox-compatible playlist XML
-
 ## Future Plans
 - Support for RomVault, EmulationStation, Pegasus, and RomM
 - GUI for configuration and preference management
-- Advanced recommendation algorithms
 - Secure credential storage
-- Plugin support for custom frontends and export formats
 
 ## Contributing
 
