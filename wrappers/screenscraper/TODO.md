@@ -1,25 +1,19 @@
 - [ ] Create data models
+    - [x] Header
     - [x] Server
     - [x] User
     - [x] Member Level Type
     - [x] Player Count Type
     - [x] Support Type
     - [x] ROM Type
-    - [ ] Genre Type
+    - [x] Genre Type
     - [x] Region Type
     - [x] Language Type
-    - [ ] Classification Type
-    - [-] Media Type
-        - [ ] System Media Type
-        - [ ] Game Media Type
-    - [ ] Info Type
-        - [ ] Game Info Type
-        - [ ] ROM Info Type
+    - [x] Classification Type
+    - [x] Media Type
+    - [x] Info Type
     - [ ] System Type
-    - [ ] Media
-        - [ ] Image
-        - [ ] Video
-        - [ ] Manual
+    - [x] Media
 - [ ] Create endpoint query functions
     - [ ] ssinfraInfos.php
     - [ ] ssuserInfos.php
@@ -48,3 +42,4 @@
     - [ ] botNote.php
     - [ ] botProposition.php
 - [ ] Implement rate limiting
+- [ ] Create download media function
